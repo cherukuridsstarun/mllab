@@ -1,0 +1,16 @@
+Algorithm
+Program
+Input
+Outuput 
+Viva
+Related questions
+
+Some questions related to :
+applications of machine learning
+types of machine learning algorithms
+Knn is what type supervised
+K means is what type unsupervised
+what is confusion matrix - true false positive negative
+applications of machine learning ?
+what is em? - expectation maximization
+supervised naive bayes is an example for naive bayes

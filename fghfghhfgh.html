@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questions</title>
+  
+</head>
+<body>
+  <form>
+	<div id="question"></div>
+      <div id="content"></div>
+<table id="mytable" border="5px" style="width:100%; height:50%">
+            <th></th>
+            <th>1</th>
+            <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <tr>
+            <td id="subject1">crg</td>
+            <td>
+              <input type='radio' name='col_1' id='1' required/>
+            </td>
+            <td>
+              <input type='radio' name='col_1' id='2'/>
+            </td>
+            <td>
+              <input type='radio' name='col_1' id='3'/>
+            </td>
+            <td>
+              <input type='radio' name='col_1' id='4'/>
+            </td>
+          </tr>
+          
+          <tr>
+            <td id="subject2">cn</td>
+            <td>
+              <input type='radio' name='col_2' id='1' required/>
+            </td>
+            <td>
+              <input type='radio' name='col_2' id='2'/>
+            </td>
+            <td>
+              <input type='radio' name='col_2' id='3'/>
+            </td>
+            <td>
+              <input type='radio' name='col_2' id='4'/>
+            </td>
+          </tr>
+          <tr>
+            <td id="subject3">caalp</td>
+            <td>
+              <input type='radio' name='col_3' id='1' required/>
+            </td>
+            <td>
+              <input type='radio' name='col_3' id='2'/>
+            </td>
+            <td>
+              <input type='radio' name='col_3' id='3'/>
+            </td>
+            <td>
+              <input type='radio' name='col_3' id='4'/>
+            </td>
+          </tr>
+        </table>
+        </form>
+	<button onclick="displayNextQuestion()">Next</button>
+  
+</body>
+<script>
+  var questions = ['Question 1', 'Question 2', 'Question 3', 'Question 4', 'Question 5', 'Question 6', 'Question 7', 'Question 8', 'Question 9', 'Question 10'];
+          var contents = ['Passion and enthusiasm to teach', 'Subject knowledge', 'Clarity and emphasis on concepts','Motivating and inspiring the student','Creating interest in the subject','Quality of illustrative visuals, examples and applications','Regularity, punctuality & uniform coverage of syllabus','Discipline and control over the class','Promoting student thinking','Encouraging student effort & inviting student interaction'];
+  var currentIndex = 1;
+  
+  function displayNextQuestion() {
+  var questionDiv = document.getElementById('question');
+  questionDiv.innerHTML = questions[currentIndex];
+  var contentDiv = document.getElementById('content');
+  contentDiv.innerHTML = contents[currentIndex];
+
+  currentIndex++;
+  if (currentIndex >= (questions.length)+1) {
+      var body = document.getElementsByTagName('body');
+      body.innerHTML = "<h1>Thank you for answering the questions!</h1>";
+  }
+};
+function resetTable() {
+    var table = document.getElementById('mytable');
+    var inputs = table.getElementsByTagName('input');
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].checked = false;
+    }
+  };
+
+</script>
+</html>
